@@ -2,6 +2,7 @@ using System.Reflection;
 using System.Runtime;
 using Microsoft.OpenApi.Models;
 using ReadingIsGood.Application.Middlewares;
+using ReadingIsGood.BuildingBlocks.Logging;
 using ReadingIsGood.Infrastructure;
 using ReadingIsGood.Infrastructure.DbInitializer;
 
@@ -24,12 +25,15 @@ var environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
 Console.WriteLine($"environment: {environment}");
 var configBuilder = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory());
 configBuilder.AddJsonFile(!string.IsNullOrWhiteSpace(environment)
-    ? $"Common/Configurations/appsettings.{environment}.json"
-    : "Common/Configurations/appsettings.json",
+        ? $"Common/Configurations/appsettings.{environment}.json"
+        : "Common/Configurations/appsettings.json",
     optional: false,
     reloadOnChange: true);
 
 builder.Configuration.AddConfiguration(configBuilder.Build());
+
+await KibanaHelper.CreateKibanaIndexPatternAsync(kibanaUrl: builder.Configuration["Kibana:Host"], patternId: builder.Configuration["Kibana:IndexPatternId"], indexPatternTitle: builder.Configuration["Kibana:IndexPattern"]);
+builder.Host.UseCustomizedSerilog();
 
 
 builder.Services.AddInfrastructureLayer(builder.Configuration);
