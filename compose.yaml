@@ -10,6 +10,7 @@
       - postgres
       - redis-stack
       - elasticsearch
+      - kibana
     environment:
       - ASPNETCORE_ENVIRONMENT=Docker
 

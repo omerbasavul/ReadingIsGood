@@ -1,0 +1,1827 @@
+{
+	"info": {
+		"_postman_id": "eb6861b0-fb17-40e5-b279-eeca73174e32",
+		"name": "ReadingIsGood API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1522312"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "SignIn",
+					"item": [
+						{
+							"name": "Customer login",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "text/plain"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"emailAddress\": \"<string>\",\n  \"password\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/Authentication/SignIn",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"Authentication",
+										"SignIn"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											},
+											{
+												"key": "Authorization",
+												"value": "<API Key>",
+												"description": "Added as a part of security scheme: apikey"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"emailAddress\": \"<string>\",\n  \"password\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/Authentication/SignIn",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Authentication",
+												"SignIn"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"data\": {\n    \"accessToken\": \"<string>\"\n  },\n  \"statusCode\": \"<integer>\",\n  \"isSuccessful\": \"<boolean>\",\n  \"paginationData\": {\n    \"currentPage\": \"<integer>\",\n    \"totalPageCount\": \"<integer>\",\n    \"totalResultCount\": \"<long>\"\n  },\n  \"errors\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}"
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											},
+											{
+												"key": "Authorization",
+												"value": "<API Key>",
+												"description": "Added as a part of security scheme: apikey"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"emailAddress\": \"<string>\",\n  \"password\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/Authentication/SignIn",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Authentication",
+												"SignIn"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"data\": \"<string>\",\n  \"statusCode\": \"<integer>\",\n  \"isSuccessful\": \"<boolean>\",\n  \"paginationData\": {\n    \"currentPage\": \"<integer>\",\n    \"totalPageCount\": \"<integer>\",\n    \"totalResultCount\": \"<long>\"\n  },\n  \"errors\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}"
+								},
+								{
+									"name": "Internal Server Error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											},
+											{
+												"key": "Authorization",
+												"value": "<API Key>",
+												"description": "Added as a part of security scheme: apikey"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"emailAddress\": \"<string>\",\n  \"password\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/Authentication/SignIn",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Authentication",
+												"SignIn"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"data\": \"<string>\",\n  \"statusCode\": \"<integer>\",\n  \"isSuccessful\": \"<boolean>\",\n  \"paginationData\": {\n    \"currentPage\": \"<integer>\",\n    \"totalPageCount\": \"<integer>\",\n    \"totalResultCount\": \"<long>\"\n  },\n  \"errors\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "SignUp",
+					"item": [
+						{
+							"name": "Customer register",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "text/plain"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"countryCode\": \"<string>\",\n  \"email\": \"<string>\",\n  \"firstname\": \"<string>\",\n  \"lastname\": \"<string>\",\n  \"password\": \"<string>\",\n  \"passwordRepeat\": \"<string>\",\n  \"phoneNumber\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/Authentication/SignUp",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"Authentication",
+										"SignUp"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											},
+											{
+												"key": "Authorization",
+												"value": "<API Key>",
+												"description": "Added as a part of security scheme: apikey"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"countryCode\": \"<string>\",\n  \"email\": \"<string>\",\n  \"firstname\": \"<string>\",\n  \"lastname\": \"<string>\",\n  \"password\": \"<string>\",\n  \"passwordRepeat\": \"<string>\",\n  \"phoneNumber\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/Authentication/SignUp",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Authentication",
+												"SignUp"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"data\": {\n    \"isCreated\": \"<boolean>\"\n  },\n  \"statusCode\": \"<integer>\",\n  \"isSuccessful\": \"<boolean>\",\n  \"paginationData\": {\n    \"currentPage\": \"<integer>\",\n    \"totalPageCount\": \"<integer>\",\n    \"totalResultCount\": \"<long>\"\n  },\n  \"errors\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}"
+								},
+								{
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											},
+											{
+												"key": "Authorization",
+												"value": "<API Key>",
+												"description": "Added as a part of security scheme: apikey"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"countryCode\": \"<string>\",\n  \"email\": \"<string>\",\n  \"firstname\": \"<string>\",\n  \"lastname\": \"<string>\",\n  \"password\": \"<string>\",\n  \"passwordRepeat\": \"<string>\",\n  \"phoneNumber\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/Authentication/SignUp",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Authentication",
+												"SignUp"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"data\": \"<string>\",\n  \"statusCode\": \"<integer>\",\n  \"isSuccessful\": \"<boolean>\",\n  \"paginationData\": {\n    \"currentPage\": \"<integer>\",\n    \"totalPageCount\": \"<integer>\",\n    \"totalResultCount\": \"<long>\"\n  },\n  \"errors\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}"
+								},
+								{
+									"name": "Internal Server Error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											},
+											{
+												"key": "Authorization",
+												"value": "<API Key>",
+												"description": "Added as a part of security scheme: apikey"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"countryCode\": \"<string>\",\n  \"email\": \"<string>\",\n  \"firstname\": \"<string>\",\n  \"lastname\": \"<string>\",\n  \"password\": \"<string>\",\n  \"passwordRepeat\": \"<string>\",\n  \"phoneNumber\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/Authentication/SignUp",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Authentication",
+												"SignUp"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"data\": \"<string>\",\n  \"statusCode\": \"<integer>\",\n  \"isSuccessful\": \"<boolean>\",\n  \"paginationData\": {\n    \"currentPage\": \"<integer>\",\n    \"totalPageCount\": \"<integer>\",\n    \"totalResultCount\": \"<long>\"\n  },\n  \"errors\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Book",
+			"item": [
+				{
+					"name": "CreateBook",
+					"item": [
+						{
+							"name": "Create book",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "text/plain"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"title\": \"<string>\",\n  \"author\": \"<string>\",\n  \"isbn\": \"<string>\",\n  \"imageUrl\": \"<string>\",\n  \"description\": \"<string>\",\n  \"price\": \"<double>\",\n  \"stockQuantity\": \"<integer>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/Book/CreateBook",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"Book",
+										"CreateBook"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											},
+											{
+												"key": "Authorization",
+												"value": "<API Key>",
+												"description": "Added as a part of security scheme: apikey"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"title\": \"<string>\",\n  \"author\": \"<string>\",\n  \"isbn\": \"<string>\",\n  \"imageUrl\": \"<string>\",\n  \"description\": \"<string>\",\n  \"price\": \"<double>\",\n  \"stockQuantity\": \"<integer>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/Book/CreateBook",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Book",
+												"CreateBook"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"data\": {\n    \"isCreated\": \"<boolean>\"\n  },\n  \"statusCode\": \"<integer>\",\n  \"isSuccessful\": \"<boolean>\",\n  \"paginationData\": {\n    \"currentPage\": \"<integer>\",\n    \"totalPageCount\": \"<integer>\",\n    \"totalResultCount\": \"<long>\"\n  },\n  \"errors\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}"
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											},
+											{
+												"key": "Authorization",
+												"value": "<API Key>",
+												"description": "Added as a part of security scheme: apikey"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"title\": \"<string>\",\n  \"author\": \"<string>\",\n  \"isbn\": \"<string>\",\n  \"imageUrl\": \"<string>\",\n  \"description\": \"<string>\",\n  \"price\": \"<double>\",\n  \"stockQuantity\": \"<integer>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/Book/CreateBook",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Book",
+												"CreateBook"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"data\": \"<string>\",\n  \"statusCode\": \"<integer>\",\n  \"isSuccessful\": \"<boolean>\",\n  \"paginationData\": {\n    \"currentPage\": \"<integer>\",\n    \"totalPageCount\": \"<integer>\",\n    \"totalResultCount\": \"<long>\"\n  },\n  \"errors\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}"
+								},
+								{
+									"name": "Internal Server Error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											},
+											{
+												"key": "Authorization",
+												"value": "<API Key>",
+												"description": "Added as a part of security scheme: apikey"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"title\": \"<string>\",\n  \"author\": \"<string>\",\n  \"isbn\": \"<string>\",\n  \"imageUrl\": \"<string>\",\n  \"description\": \"<string>\",\n  \"price\": \"<double>\",\n  \"stockQuantity\": \"<integer>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/Book/CreateBook",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Book",
+												"CreateBook"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"data\": \"<string>\",\n  \"statusCode\": \"<integer>\",\n  \"isSuccessful\": \"<boolean>\",\n  \"paginationData\": {\n    \"currentPage\": \"<integer>\",\n    \"totalPageCount\": \"<integer>\",\n    \"totalResultCount\": \"<long>\"\n  },\n  \"errors\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "GetBookList",
+					"item": [
+						{
+							"name": "Get book list",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "text/plain"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"pageNumber\": \"<integer>\",\n  \"pageSize\": \"<integer>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/Book/GetBookList",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"Book",
+										"GetBookList"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											},
+											{
+												"key": "Authorization",
+												"value": "<API Key>",
+												"description": "Added as a part of security scheme: apikey"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"pageNumber\": \"<integer>\",\n  \"pageSize\": \"<integer>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/Book/GetBookList",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Book",
+												"GetBookList"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"data\": {\n    \"books\": [\n      {\n        \"id\": \"<uuid>\",\n        \"title\": \"<string>\",\n        \"author\": \"<string>\",\n        \"isbn\": \"<string>\",\n        \"imageUrl\": \"<string>\",\n        \"description\": \"<string>\",\n        \"price\": \"<double>\",\n        \"stockQuantity\": \"<integer>\"\n      },\n      {\n        \"id\": \"<uuid>\",\n        \"title\": \"<string>\",\n        \"author\": \"<string>\",\n        \"isbn\": \"<string>\",\n        \"imageUrl\": \"<string>\",\n        \"description\": \"<string>\",\n        \"price\": \"<double>\",\n        \"stockQuantity\": \"<integer>\"\n      }\n    ],\n    \"pagination\": {\n      \"currentPage\": \"<integer>\",\n      \"totalPageCount\": \"<integer>\",\n      \"totalResultCount\": \"<long>\"\n    }\n  },\n  \"statusCode\": \"<integer>\",\n  \"isSuccessful\": \"<boolean>\",\n  \"paginationData\": {\n    \"currentPage\": \"<integer>\",\n    \"totalPageCount\": \"<integer>\",\n    \"totalResultCount\": \"<long>\"\n  },\n  \"errors\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}"
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											},
+											{
+												"key": "Authorization",
+												"value": "<API Key>",
+												"description": "Added as a part of security scheme: apikey"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"pageNumber\": \"<integer>\",\n  \"pageSize\": \"<integer>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/Book/GetBookList",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Book",
+												"GetBookList"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"data\": \"<string>\",\n  \"statusCode\": \"<integer>\",\n  \"isSuccessful\": \"<boolean>\",\n  \"paginationData\": {\n    \"currentPage\": \"<integer>\",\n    \"totalPageCount\": \"<integer>\",\n    \"totalResultCount\": \"<long>\"\n  },\n  \"errors\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}"
+								},
+								{
+									"name": "Internal Server Error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											},
+											{
+												"key": "Authorization",
+												"value": "<API Key>",
+												"description": "Added as a part of security scheme: apikey"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"pageNumber\": \"<integer>\",\n  \"pageSize\": \"<integer>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/Book/GetBookList",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Book",
+												"GetBookList"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"data\": \"<string>\",\n  \"statusCode\": \"<integer>\",\n  \"isSuccessful\": \"<boolean>\",\n  \"paginationData\": {\n    \"currentPage\": \"<integer>\",\n    \"totalPageCount\": \"<integer>\",\n    \"totalResultCount\": \"<long>\"\n  },\n  \"errors\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "GetCustomerOrderList",
+					"item": [
+						{
+							"name": "Get customer order list",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "text/plain"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"pageNumber\": \"<integer>\",\n  \"pageSize\": \"<integer>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/Customer/GetCustomerOrderList",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"Customer",
+										"GetCustomerOrderList"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											},
+											{
+												"key": "Authorization",
+												"value": "<API Key>",
+												"description": "Added as a part of security scheme: apikey"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"pageNumber\": \"<integer>\",\n  \"pageSize\": \"<integer>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/Customer/GetCustomerOrderList",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Customer",
+												"GetCustomerOrderList"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"data\": {\n    \"orders\": [\n      {\n        \"customerId\": \"<uuid>\",\n        \"totalAmount\": \"<double>\",\n        \"status\": 0,\n        \"orderItems\": [\n          {\n            \"orderId\": \"<uuid>\",\n            \"quantity\": \"<integer>\",\n            \"price\": \"<double>\",\n            \"book\": {\n              \"id\": \"<uuid>\",\n              \"title\": \"<string>\",\n              \"author\": \"<string>\",\n              \"isbn\": \"<string>\",\n              \"imageUrl\": \"<string>\",\n              \"description\": \"<string>\",\n              \"price\": \"<double>\",\n              \"stockQuantity\": \"<integer>\"\n            }\n          },\n          {\n            \"orderId\": \"<uuid>\",\n            \"quantity\": \"<integer>\",\n            \"price\": \"<double>\",\n            \"book\": {\n              \"id\": \"<uuid>\",\n              \"title\": \"<string>\",\n              \"author\": \"<string>\",\n              \"isbn\": \"<string>\",\n              \"imageUrl\": \"<string>\",\n              \"description\": \"<string>\",\n              \"price\": \"<double>\",\n              \"stockQuantity\": \"<integer>\"\n            }\n          }\n        ]\n      },\n      {\n        \"customerId\": \"<uuid>\",\n        \"totalAmount\": \"<double>\",\n        \"status\": 1,\n        \"orderItems\": [\n          {\n            \"orderId\": \"<uuid>\",\n            \"quantity\": \"<integer>\",\n            \"price\": \"<double>\",\n            \"book\": {\n              \"id\": \"<uuid>\",\n              \"title\": \"<string>\",\n              \"author\": \"<string>\",\n              \"isbn\": \"<string>\",\n              \"imageUrl\": \"<string>\",\n              \"description\": \"<string>\",\n              \"price\": \"<double>\",\n              \"stockQuantity\": \"<integer>\"\n            }\n          },\n          {\n            \"orderId\": \"<uuid>\",\n            \"quantity\": \"<integer>\",\n            \"price\": \"<double>\",\n            \"book\": {\n              \"id\": \"<uuid>\",\n              \"title\": \"<string>\",\n              \"author\": \"<string>\",\n              \"isbn\": \"<string>\",\n              \"imageUrl\": \"<string>\",\n              \"description\": \"<string>\",\n              \"price\": \"<double>\",\n              \"stockQuantity\": \"<integer>\"\n            }\n          }\n        ]\n      }\n    ],\n    \"pagination\": {\n      \"currentPage\": \"<integer>\",\n      \"totalPageCount\": \"<integer>\",\n      \"totalResultCount\": \"<long>\"\n    }\n  },\n  \"statusCode\": \"<integer>\",\n  \"isSuccessful\": \"<boolean>\",\n  \"paginationData\": {\n    \"currentPage\": \"<integer>\",\n    \"totalPageCount\": \"<integer>\",\n    \"totalResultCount\": \"<long>\"\n  },\n  \"errors\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}"
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											},
+											{
+												"key": "Authorization",
+												"value": "<API Key>",
+												"description": "Added as a part of security scheme: apikey"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"pageNumber\": \"<integer>\",\n  \"pageSize\": \"<integer>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/Customer/GetCustomerOrderList",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Customer",
+												"GetCustomerOrderList"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"data\": \"<string>\",\n  \"statusCode\": \"<integer>\",\n  \"isSuccessful\": \"<boolean>\",\n  \"paginationData\": {\n    \"currentPage\": \"<integer>\",\n    \"totalPageCount\": \"<integer>\",\n    \"totalResultCount\": \"<long>\"\n  },\n  \"errors\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}"
+								},
+								{
+									"name": "Internal Server Error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											},
+											{
+												"key": "Authorization",
+												"value": "<API Key>",
+												"description": "Added as a part of security scheme: apikey"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"pageNumber\": \"<integer>\",\n  \"pageSize\": \"<integer>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/Customer/GetCustomerOrderList",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Customer",
+												"GetCustomerOrderList"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"data\": \"<string>\",\n  \"statusCode\": \"<integer>\",\n  \"isSuccessful\": \"<boolean>\",\n  \"paginationData\": {\n    \"currentPage\": \"<integer>\",\n    \"totalPageCount\": \"<integer>\",\n    \"totalResultCount\": \"<long>\"\n  },\n  \"errors\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "CreateOrder",
+					"item": [
+						{
+							"name": "Create Order",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "text/plain"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"bookId\": \"<uuid>\",\n  \"quantity\": \"<integer>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/Order/CreateOrder",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"Order",
+										"CreateOrder"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											},
+											{
+												"key": "Authorization",
+												"value": "<API Key>",
+												"description": "Added as a part of security scheme: apikey"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"bookId\": \"<uuid>\",\n  \"quantity\": \"<integer>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/Order/CreateOrder",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Order",
+												"CreateOrder"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"data\": {\n    \"orderId\": \"<uuid>\"\n  },\n  \"statusCode\": \"<integer>\",\n  \"isSuccessful\": \"<boolean>\",\n  \"paginationData\": {\n    \"currentPage\": \"<integer>\",\n    \"totalPageCount\": \"<integer>\",\n    \"totalResultCount\": \"<long>\"\n  },\n  \"errors\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}"
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											},
+											{
+												"key": "Authorization",
+												"value": "<API Key>",
+												"description": "Added as a part of security scheme: apikey"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"bookId\": \"<uuid>\",\n  \"quantity\": \"<integer>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/Order/CreateOrder",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Order",
+												"CreateOrder"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"data\": \"<string>\",\n  \"statusCode\": \"<integer>\",\n  \"isSuccessful\": \"<boolean>\",\n  \"paginationData\": {\n    \"currentPage\": \"<integer>\",\n    \"totalPageCount\": \"<integer>\",\n    \"totalResultCount\": \"<long>\"\n  },\n  \"errors\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}"
+								},
+								{
+									"name": "Internal Server Error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											},
+											{
+												"key": "Authorization",
+												"value": "<API Key>",
+												"description": "Added as a part of security scheme: apikey"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"bookId\": \"<uuid>\",\n  \"quantity\": \"<integer>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/Order/CreateOrder",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Order",
+												"CreateOrder"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"data\": \"<string>\",\n  \"statusCode\": \"<integer>\",\n  \"isSuccessful\": \"<boolean>\",\n  \"paginationData\": {\n    \"currentPage\": \"<integer>\",\n    \"totalPageCount\": \"<integer>\",\n    \"totalResultCount\": \"<long>\"\n  },\n  \"errors\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "GetOrderDetailById",
+					"item": [
+						{
+							"name": "Get Order by id",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "text/plain"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"orderId\": \"<uuid>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/Order/GetOrderDetailById",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"Order",
+										"GetOrderDetailById"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											},
+											{
+												"key": "Authorization",
+												"value": "<API Key>",
+												"description": "Added as a part of security scheme: apikey"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"orderId\": \"<uuid>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/Order/GetOrderDetailById",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Order",
+												"GetOrderDetailById"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"data\": {\n    \"order\": {\n      \"customerId\": \"<uuid>\",\n      \"totalAmount\": \"<double>\",\n      \"status\": 0,\n      \"orderItems\": [\n        {\n          \"orderId\": \"<uuid>\",\n          \"quantity\": \"<integer>\",\n          \"price\": \"<double>\",\n          \"book\": {\n            \"id\": \"<uuid>\",\n            \"title\": \"<string>\",\n            \"author\": \"<string>\",\n            \"isbn\": \"<string>\",\n            \"imageUrl\": \"<string>\",\n            \"description\": \"<string>\",\n            \"price\": \"<double>\",\n            \"stockQuantity\": \"<integer>\"\n          }\n        },\n        {\n          \"orderId\": \"<uuid>\",\n          \"quantity\": \"<integer>\",\n          \"price\": \"<double>\",\n          \"book\": {\n            \"id\": \"<uuid>\",\n            \"title\": \"<string>\",\n            \"author\": \"<string>\",\n            \"isbn\": \"<string>\",\n            \"imageUrl\": \"<string>\",\n            \"description\": \"<string>\",\n            \"price\": \"<double>\",\n            \"stockQuantity\": \"<integer>\"\n          }\n        }\n      ]\n    }\n  },\n  \"statusCode\": \"<integer>\",\n  \"isSuccessful\": \"<boolean>\",\n  \"paginationData\": {\n    \"currentPage\": \"<integer>\",\n    \"totalPageCount\": \"<integer>\",\n    \"totalResultCount\": \"<long>\"\n  },\n  \"errors\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}"
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											},
+											{
+												"key": "Authorization",
+												"value": "<API Key>",
+												"description": "Added as a part of security scheme: apikey"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"orderId\": \"<uuid>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/Order/GetOrderDetailById",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Order",
+												"GetOrderDetailById"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"data\": \"<string>\",\n  \"statusCode\": \"<integer>\",\n  \"isSuccessful\": \"<boolean>\",\n  \"paginationData\": {\n    \"currentPage\": \"<integer>\",\n    \"totalPageCount\": \"<integer>\",\n    \"totalResultCount\": \"<long>\"\n  },\n  \"errors\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}"
+								},
+								{
+									"name": "Internal Server Error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											},
+											{
+												"key": "Authorization",
+												"value": "<API Key>",
+												"description": "Added as a part of security scheme: apikey"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"orderId\": \"<uuid>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/Order/GetOrderDetailById",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Order",
+												"GetOrderDetailById"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"data\": \"<string>\",\n  \"statusCode\": \"<integer>\",\n  \"isSuccessful\": \"<boolean>\",\n  \"paginationData\": {\n    \"currentPage\": \"<integer>\",\n    \"totalPageCount\": \"<integer>\",\n    \"totalResultCount\": \"<long>\"\n  },\n  \"errors\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "GetOrdersByDateRange",
+					"item": [
+						{
+							"name": "Get Orders by date range",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "text/plain"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"endDate\": \"<dateTime>\",\n  \"startDate\": \"<dateTime>\",\n  \"pageNumber\": \"<integer>\",\n  \"pageSize\": \"<integer>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/Order/GetOrdersByDateRange",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"Order",
+										"GetOrdersByDateRange"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											},
+											{
+												"key": "Authorization",
+												"value": "<API Key>",
+												"description": "Added as a part of security scheme: apikey"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"endDate\": \"<dateTime>\",\n  \"startDate\": \"<dateTime>\",\n  \"pageNumber\": \"<integer>\",\n  \"pageSize\": \"<integer>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/Order/GetOrdersByDateRange",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Order",
+												"GetOrdersByDateRange"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"data\": {\n    \"orders\": [\n      {\n        \"customerId\": \"<uuid>\",\n        \"totalAmount\": \"<double>\",\n        \"status\": 0,\n        \"orderItems\": [\n          {\n            \"orderId\": \"<uuid>\",\n            \"quantity\": \"<integer>\",\n            \"price\": \"<double>\",\n            \"book\": {\n              \"id\": \"<uuid>\",\n              \"title\": \"<string>\",\n              \"author\": \"<string>\",\n              \"isbn\": \"<string>\",\n              \"imageUrl\": \"<string>\",\n              \"description\": \"<string>\",\n              \"price\": \"<double>\",\n              \"stockQuantity\": \"<integer>\"\n            }\n          },\n          {\n            \"orderId\": \"<uuid>\",\n            \"quantity\": \"<integer>\",\n            \"price\": \"<double>\",\n            \"book\": {\n              \"id\": \"<uuid>\",\n              \"title\": \"<string>\",\n              \"author\": \"<string>\",\n              \"isbn\": \"<string>\",\n              \"imageUrl\": \"<string>\",\n              \"description\": \"<string>\",\n              \"price\": \"<double>\",\n              \"stockQuantity\": \"<integer>\"\n            }\n          }\n        ]\n      },\n      {\n        \"customerId\": \"<uuid>\",\n        \"totalAmount\": \"<double>\",\n        \"status\": 1,\n        \"orderItems\": [\n          {\n            \"orderId\": \"<uuid>\",\n            \"quantity\": \"<integer>\",\n            \"price\": \"<double>\",\n            \"book\": {\n              \"id\": \"<uuid>\",\n              \"title\": \"<string>\",\n              \"author\": \"<string>\",\n              \"isbn\": \"<string>\",\n              \"imageUrl\": \"<string>\",\n              \"description\": \"<string>\",\n              \"price\": \"<double>\",\n              \"stockQuantity\": \"<integer>\"\n            }\n          },\n          {\n            \"orderId\": \"<uuid>\",\n            \"quantity\": \"<integer>\",\n            \"price\": \"<double>\",\n            \"book\": {\n              \"id\": \"<uuid>\",\n              \"title\": \"<string>\",\n              \"author\": \"<string>\",\n              \"isbn\": \"<string>\",\n              \"imageUrl\": \"<string>\",\n              \"description\": \"<string>\",\n              \"price\": \"<double>\",\n              \"stockQuantity\": \"<integer>\"\n            }\n          }\n        ]\n      }\n    ],\n    \"pagination\": {\n      \"currentPage\": \"<integer>\",\n      \"totalPageCount\": \"<integer>\",\n      \"totalResultCount\": \"<long>\"\n    }\n  },\n  \"statusCode\": \"<integer>\",\n  \"isSuccessful\": \"<boolean>\",\n  \"paginationData\": {\n    \"currentPage\": \"<integer>\",\n    \"totalPageCount\": \"<integer>\",\n    \"totalResultCount\": \"<long>\"\n  },\n  \"errors\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}"
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											},
+											{
+												"key": "Authorization",
+												"value": "<API Key>",
+												"description": "Added as a part of security scheme: apikey"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"endDate\": \"<dateTime>\",\n  \"startDate\": \"<dateTime>\",\n  \"pageNumber\": \"<integer>\",\n  \"pageSize\": \"<integer>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/Order/GetOrdersByDateRange",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Order",
+												"GetOrdersByDateRange"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"data\": \"<string>\",\n  \"statusCode\": \"<integer>\",\n  \"isSuccessful\": \"<boolean>\",\n  \"paginationData\": {\n    \"currentPage\": \"<integer>\",\n    \"totalPageCount\": \"<integer>\",\n    \"totalResultCount\": \"<long>\"\n  },\n  \"errors\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}"
+								},
+								{
+									"name": "Internal Server Error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											},
+											{
+												"key": "Authorization",
+												"value": "<API Key>",
+												"description": "Added as a part of security scheme: apikey"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"endDate\": \"<dateTime>\",\n  \"startDate\": \"<dateTime>\",\n  \"pageNumber\": \"<integer>\",\n  \"pageSize\": \"<integer>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/Order/GetOrdersByDateRange",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Order",
+												"GetOrdersByDateRange"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"data\": \"<string>\",\n  \"statusCode\": \"<integer>\",\n  \"isSuccessful\": \"<boolean>\",\n  \"paginationData\": {\n    \"currentPage\": \"<integer>\",\n    \"totalPageCount\": \"<integer>\",\n    \"totalResultCount\": \"<long>\"\n  },\n  \"errors\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Statistics",
+			"item": [
+				{
+					"name": "GetMonthlyStatistics",
+					"item": [
+						{
+							"name": "{customerId}",
+							"item": [
+								{
+									"name": "Get monthly statistics",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/Statistics/GetMonthlyStatistics/:customerId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Statistics",
+												"GetMonthlyStatistics",
+												":customerId"
+											],
+											"variable": [
+												{
+													"key": "customerId",
+													"value": "<uuid>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													},
+													{
+														"key": "Authorization",
+														"value": "<API Key>",
+														"description": "Added as a part of security scheme: apikey"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/Statistics/GetMonthlyStatistics/:customerId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"Statistics",
+														"GetMonthlyStatistics",
+														":customerId"
+													],
+													"variable": [
+														{
+															"key": "customerId"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"data\": {\n    \"monthlyStatistics\": [\n      {\n        \"monthName\": \"<string>\",\n        \"year\": \"<integer>\",\n        \"totalOrderCount\": \"<integer>\",\n        \"totalBookCount\": \"<integer>\",\n        \"totalPurchasedAmount\": \"<double>\"\n      },\n      {\n        \"monthName\": \"<string>\",\n        \"year\": \"<integer>\",\n        \"totalOrderCount\": \"<integer>\",\n        \"totalBookCount\": \"<integer>\",\n        \"totalPurchasedAmount\": \"<double>\"\n      }\n    ]\n  },\n  \"statusCode\": \"<integer>\",\n  \"isSuccessful\": \"<boolean>\",\n  \"paginationData\": {\n    \"currentPage\": \"<integer>\",\n    \"totalPageCount\": \"<integer>\",\n    \"totalResultCount\": \"<long>\"\n  },\n  \"errors\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}"
+										},
+										{
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													},
+													{
+														"key": "Authorization",
+														"value": "<API Key>",
+														"description": "Added as a part of security scheme: apikey"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/Statistics/GetMonthlyStatistics/:customerId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"Statistics",
+														"GetMonthlyStatistics",
+														":customerId"
+													],
+													"variable": [
+														{
+															"key": "customerId"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"data\": \"<string>\",\n  \"statusCode\": \"<integer>\",\n  \"isSuccessful\": \"<boolean>\",\n  \"paginationData\": {\n    \"currentPage\": \"<integer>\",\n    \"totalPageCount\": \"<integer>\",\n    \"totalResultCount\": \"<long>\"\n  },\n  \"errors\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}"
+										},
+										{
+											"name": "Internal Server Error",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													},
+													{
+														"key": "Authorization",
+														"value": "<API Key>",
+														"description": "Added as a part of security scheme: apikey"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/Statistics/GetMonthlyStatistics/:customerId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"Statistics",
+														"GetMonthlyStatistics",
+														":customerId"
+													],
+													"variable": [
+														{
+															"key": "customerId"
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"data\": \"<string>\",\n  \"statusCode\": \"<integer>\",\n  \"isSuccessful\": \"<boolean>\",\n  \"paginationData\": {\n    \"currentPage\": \"<integer>\",\n    \"totalPageCount\": \"<integer>\",\n    \"totalResultCount\": \"<long>\"\n  },\n  \"errors\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "key",
+				"value": "Authorization",
+				"type": "string"
+			},
+			{
+				"key": "value",
+				"value": "{{apiKey}}",
+				"type": "string"
+			},
+			{
+				"key": "in",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "/"
+		}
+	]
+}
