@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Mapster" Version="7.4.0" />
+        <PackageReference Include="FastExpressionCompiler" Version="5.1.1" />
+        <PackageReference Include="Mapster.DependencyInjection" Version="1.0.1" />
+        <PackageReference Include="Mediator.Abstractions" Version="2.1.7" />
+        <PackageReference Include="Mediator.SourceGenerator" Version="2.1.7">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.7" />
+        <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.0.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\BuildingBlocks\ReadingIsGood.BuildingBlocks.Common\ReadingIsGood.BuildingBlocks.Common.csproj" />
+      <ProjectReference Include="..\..\BuildingBlocks\ReadingIsGood.BuildingBlocks.EntityFrameworkCore\ReadingIsGood.BuildingBlocks.EntityFrameworkCore.csproj" />
+      <ProjectReference Include="..\..\BuildingBlocks\ReadingIsGood.BuildingBlocks.Redis\ReadingIsGood.BuildingBlocks.Redis.csproj" />
+      <ProjectReference Include="..\ReadingIsGood.Domain\ReadingIsGood.Domain.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Features\Customers\Command\" />
+    </ItemGroup>
+    
+</Project>

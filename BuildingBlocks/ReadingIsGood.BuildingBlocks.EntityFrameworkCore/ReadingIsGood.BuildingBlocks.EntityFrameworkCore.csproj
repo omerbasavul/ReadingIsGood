@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.15" />
+    </ItemGroup>
+    
+    <ItemGroup>
+      <ProjectReference Include="..\ReadingIsGood.BuildingBlocks.ApplicationContext\ReadingIsGood.BuildingBlocks.ApplicationContext.csproj" />
+      <ProjectReference Include="..\ReadingIsGood.BuildingBlocks.Common\ReadingIsGood.BuildingBlocks.Common.csproj" />
+    </ItemGroup>
+
+</Project>

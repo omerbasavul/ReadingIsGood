@@ -1,0 +1,81 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadingIsGood.Api", "Presentation\ReadingIsGood.Api\ReadingIsGood.Api.csproj", "{5C69E4EC-2C31-45F8-A313-36B31C51FDB3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{6E99901A-035F-4BAC-B476-E24788A9F81B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{8ADCD7C6-2B71-4531-BA42-A33BF195B1C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadingIsGood.Application", "Core\ReadingIsGood.Application\ReadingIsGood.Application.csproj", "{106BB528-C83B-4C79-A34C-45DFF017958B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadingIsGood.Domain", "Core\ReadingIsGood.Domain\ReadingIsGood.Domain.csproj", "{F69EF836-122F-445F-A04D-174E168FEEB2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadingIsGood.Infrastructure", "Infrastructure\ReadingIsGood.Infrastructure\ReadingIsGood.Infrastructure.csproj", "{802DAA9C-0531-487D-BF77-F54A058BD71A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildingBlocks", "BuildingBlocks", "{2AD4E3A8-23CE-4AD9-98B9-BBD5861F0CD5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadingIsGood.BuildingBlocks.ApplicationContext", "BuildingBlocks\ReadingIsGood.BuildingBlocks.ApplicationContext\ReadingIsGood.BuildingBlocks.ApplicationContext.csproj", "{946083FC-2234-4FF9-9214-9B76A508651A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadingIsGood.BuildingBlocks.Common", "BuildingBlocks\ReadingIsGood.BuildingBlocks.Common\ReadingIsGood.BuildingBlocks.Common.csproj", "{F2FD0BAD-DCC5-46B8-90FE-E9E71F71E6ED}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E50A8D36-B873-458E-A4E5-6C724957F2A3}"
+	ProjectSection(SolutionItems) = preProject
+		compose.yaml = compose.yaml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadingIsGood.BuildingBlocks.EntityFrameworkCore", "BuildingBlocks\ReadingIsGood.BuildingBlocks.EntityFrameworkCore\ReadingIsGood.BuildingBlocks.EntityFrameworkCore.csproj", "{A32DBEEA-5673-461B-91DE-D5E69BD4D103}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadingIsGood.BuildingBlocks.Redis", "BuildingBlocks\ReadingIsGood.BuildingBlocks.Redis\ReadingIsGood.BuildingBlocks.Redis.csproj", "{85FA300B-3B11-497F-85FC-B626B8948ECE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{165AEFB9-1F70-497B-A9AF-045F44BB3811}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5C69E4EC-2C31-45F8-A313-36B31C51FDB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C69E4EC-2C31-45F8-A313-36B31C51FDB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C69E4EC-2C31-45F8-A313-36B31C51FDB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C69E4EC-2C31-45F8-A313-36B31C51FDB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{106BB528-C83B-4C79-A34C-45DFF017958B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{106BB528-C83B-4C79-A34C-45DFF017958B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{106BB528-C83B-4C79-A34C-45DFF017958B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{106BB528-C83B-4C79-A34C-45DFF017958B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F69EF836-122F-445F-A04D-174E168FEEB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F69EF836-122F-445F-A04D-174E168FEEB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F69EF836-122F-445F-A04D-174E168FEEB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F69EF836-122F-445F-A04D-174E168FEEB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{802DAA9C-0531-487D-BF77-F54A058BD71A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{802DAA9C-0531-487D-BF77-F54A058BD71A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{802DAA9C-0531-487D-BF77-F54A058BD71A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{802DAA9C-0531-487D-BF77-F54A058BD71A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{946083FC-2234-4FF9-9214-9B76A508651A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{946083FC-2234-4FF9-9214-9B76A508651A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{946083FC-2234-4FF9-9214-9B76A508651A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{946083FC-2234-4FF9-9214-9B76A508651A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2FD0BAD-DCC5-46B8-90FE-E9E71F71E6ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2FD0BAD-DCC5-46B8-90FE-E9E71F71E6ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2FD0BAD-DCC5-46B8-90FE-E9E71F71E6ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2FD0BAD-DCC5-46B8-90FE-E9E71F71E6ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A32DBEEA-5673-461B-91DE-D5E69BD4D103}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A32DBEEA-5673-461B-91DE-D5E69BD4D103}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A32DBEEA-5673-461B-91DE-D5E69BD4D103}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A32DBEEA-5673-461B-91DE-D5E69BD4D103}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85FA300B-3B11-497F-85FC-B626B8948ECE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85FA300B-3B11-497F-85FC-B626B8948ECE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85FA300B-3B11-497F-85FC-B626B8948ECE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85FA300B-3B11-497F-85FC-B626B8948ECE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{106BB528-C83B-4C79-A34C-45DFF017958B} = {6E99901A-035F-4BAC-B476-E24788A9F81B}
+		{F69EF836-122F-445F-A04D-174E168FEEB2} = {6E99901A-035F-4BAC-B476-E24788A9F81B}
+		{802DAA9C-0531-487D-BF77-F54A058BD71A} = {8ADCD7C6-2B71-4531-BA42-A33BF195B1C6}
+		{946083FC-2234-4FF9-9214-9B76A508651A} = {2AD4E3A8-23CE-4AD9-98B9-BBD5861F0CD5}
+		{F2FD0BAD-DCC5-46B8-90FE-E9E71F71E6ED} = {2AD4E3A8-23CE-4AD9-98B9-BBD5861F0CD5}
+		{A32DBEEA-5673-461B-91DE-D5E69BD4D103} = {2AD4E3A8-23CE-4AD9-98B9-BBD5861F0CD5}
+		{85FA300B-3B11-497F-85FC-B626B8948ECE} = {2AD4E3A8-23CE-4AD9-98B9-BBD5861F0CD5}
+		{5C69E4EC-2C31-45F8-A313-36B31C51FDB3} = {165AEFB9-1F70-497B-A9AF-045F44BB3811}
+	EndGlobalSection
+EndGlobal

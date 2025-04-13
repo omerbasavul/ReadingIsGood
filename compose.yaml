@@ -1,0 +1,76 @@
+﻿services:
+  readingisgood.api:
+    build:
+      context: .
+      dockerfile: Presentation/ReadingIsGood.Api/Dockerfile
+    container_name: readingisgood.api
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+      - redis-stack
+      - elasticsearch
+      - eventstore
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Docker
+
+  redis-stack:
+    image: redis/redis-stack:latest
+    container_name: redis-stack
+    ports:
+      - "6379:6379"
+      - "8001:8001"
+    volumes:
+      - redisdata:/data
+
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - dbdata:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=ReadingIsGoodDb
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+
+  elasticsearch:
+    image: elasticsearch:7.17.0
+    container_name: elasticsearch
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+      - network.host=0.0.0.0
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    volumes:
+      - esdata:/usr/share/elasticsearch/data
+
+  kibana:
+    image: kibana:7.17.0
+    container_name: kibana
+    depends_on:
+      - elasticsearch
+    environment:
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+    ports:
+      - "5601:5601"
+
+  eventstore:
+    image: eventstore/eventstore:21.10.10-buster-slim
+    container_name: eventstore
+    environment:
+      - EVENTSTORE_CLUSTER_SIZE=1
+      - EVENTSTORE_RUN_PROJECTIONS=All
+      - EVENTSTORE_START_STANDARD_PROJECTIONS=true
+      - EVENTSTORE_INSECURE=true
+    ports:
+      - "2113:2113"
+      - "1113:1113"
+
+volumes:
+  redisdata:
+  dbdata:
+  esdata:
