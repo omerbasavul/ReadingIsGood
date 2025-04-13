@@ -10,7 +10,6 @@
       - postgres
       - redis-stack
       - elasticsearch
-      - eventstore
     environment:
       - ASPNETCORE_ENVIRONMENT=Docker
 
@@ -57,18 +56,6 @@
       - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
     ports:
       - "5601:5601"
-
-  eventstore:
-    image: eventstore/eventstore:21.10.10-buster-slim
-    container_name: eventstore
-    environment:
-      - EVENTSTORE_CLUSTER_SIZE=1
-      - EVENTSTORE_RUN_PROJECTIONS=All
-      - EVENTSTORE_START_STANDARD_PROJECTIONS=true
-      - EVENTSTORE_INSECURE=true
-    ports:
-      - "2113:2113"
-      - "1113:1113"
 
 volumes:
   redisdata:

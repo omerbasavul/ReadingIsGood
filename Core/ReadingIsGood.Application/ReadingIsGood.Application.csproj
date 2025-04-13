@@ -27,7 +27,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Features\Customers\Command\" />
+      <Folder Include="Features\Authentication\" />
     </ItemGroup>
     
 </Project>

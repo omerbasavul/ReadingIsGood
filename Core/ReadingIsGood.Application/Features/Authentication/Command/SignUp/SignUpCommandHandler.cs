@@ -6,7 +6,7 @@ using ReadingIsGood.Application.Models;
 using ReadingIsGood.Application.Services.Customers;
 using ReadingIsGood.BuildingBlocks.Common.Wrapper;
 
-namespace ReadingIsGood.Application.Features.Customers.Command.SignUp;
+namespace ReadingIsGood.Application.Features.Authentication.Command.SignUp;
 
 public class SignUpCommandHandler(
     ICustomerService customerService,

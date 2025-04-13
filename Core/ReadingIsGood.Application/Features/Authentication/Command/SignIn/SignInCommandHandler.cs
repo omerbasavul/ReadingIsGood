@@ -6,7 +6,7 @@ using ReadingIsGood.Application.Services.Customers;
 using ReadingIsGood.BuildingBlocks.Common.CustomException;
 using ReadingIsGood.BuildingBlocks.Common.Wrapper;
 
-namespace ReadingIsGood.Application.Features.Customers.Command.SignIn;
+namespace ReadingIsGood.Application.Features.Authentication.Command.SignIn;
 
 public sealed class SignInCommandHandler(
     ICustomerService customerService,

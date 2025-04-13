@@ -1,7 +1,7 @@
 ﻿using Mediator;
 using ReadingIsGood.BuildingBlocks.Common.Wrapper;
 
-namespace ReadingIsGood.Application.Features.Customers.Command.SignIn;
+namespace ReadingIsGood.Application.Features.Authentication.Command.SignIn;
 
 public sealed class SignInCommandRequest : IRequest<BaseResponse<SignInCommandResponse>>
 {
